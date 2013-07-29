@@ -1,4 +1,6 @@
 Freemarket::Application.routes.draw do
+  devise_for :users
+  root 'home#index'
   resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.
