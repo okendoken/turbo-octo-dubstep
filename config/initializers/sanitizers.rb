@@ -1,0 +1,1 @@
+require "#{Rails.application.root}/lib/user_parameter_sanitizer.rb"
