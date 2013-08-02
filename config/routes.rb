@@ -1,6 +1,8 @@
 Freemarket::Application.routes.draw do
+  resources :things
+
   get "home/index"
-  devise_for :users
+  devise_for :users, :controllers => {:registrations => "users/registrations", :passwords => "users/passwords"}
   root 'home#index'
   resources :users, :except => [:create, :destroy]
 
