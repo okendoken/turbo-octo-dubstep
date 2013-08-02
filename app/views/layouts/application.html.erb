@@ -13,10 +13,13 @@
 <% if alert %>
     <div class="alert alert-error"><%= alert %></div>
 <% end %>
-<%= link_to 'Sign In', new_user_session_path if !user_signed_in?%>
-<%= link_to 'Sign Out', destroy_user_session_path, :method => :delete if user_signed_in?%>
 <%= link_to 'Users', users_path %>
 <%= link_to 'Things', things_path %>
+<div style="float: right;">
+  <%= link_to 'Profile', edit_user_path(current_user) if user_signed_in?%>
+  <%= link_to 'Sign In', new_user_session_path if !user_signed_in?%>
+  <%= link_to 'Sign Out', destroy_user_session_path, :method => :delete if user_signed_in?%>
+</div>
 
 <%= yield %>
 

@@ -16,9 +16,9 @@
 </p>
 
 <p>
-  <strong>User:</strong>
+  <strong>Author:</strong>
   <%= link_to @thing.user.username, @thing.user %>
 </p>
 
-<%= link_to 'Edit', edit_thing_path(@thing) %> |
-<%= link_to 'Back', things_path %>
+<%= link_to 'Edit', edit_thing_path(@thing) if can? :manage, @thing%> |
+<%= link_to 'Back', things_path if can? :manage, @thing %>
