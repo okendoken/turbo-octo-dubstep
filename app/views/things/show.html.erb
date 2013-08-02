@@ -17,7 +17,7 @@
 
 <p>
   <strong>User:</strong>
-  <%= @thing.user %>
+  <%= link_to @thing.user.username, @thing.user %>
 </p>
 
 <%= link_to 'Edit', edit_thing_path(@thing) %> |

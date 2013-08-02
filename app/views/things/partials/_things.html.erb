@@ -1,0 +1,27 @@
+<table>
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Given</th>
+    <th>Description</th>
+    <th>User</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% things.each do |thing| %>
+      <tr>
+        <td><%= thing.name %></td>
+        <td><%= thing.is_given? %></td>
+        <td><%= thing.description %></td>
+        <td><%= link_to thing.user.username, thing.user %></td>
+        <td><%= link_to 'Show', thing %></td>
+        <td><%= link_to 'Edit', edit_thing_path(thing) %></td>
+        <td><%= link_to 'Destroy', thing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
