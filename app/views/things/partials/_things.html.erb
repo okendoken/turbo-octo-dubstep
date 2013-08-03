@@ -15,10 +15,10 @@
   <tbody>
   <% things.each do |thing| %>
       <tr>
-        <td><%= link_to thing.name, thing %></td>
+        <td><%= thing_link thing %></td>
         <td><%= thing.is_given? %></td>
         <td><%= thing.description %></td>
-        <td><%= link_to thing.user.username, thing.user %></td>
+        <td><%= user_link thing.user %></td>
       </tr>
   <% end %>
   </tbody>

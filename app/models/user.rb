@@ -7,4 +7,5 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :things
+  has_many :pending_wants, :through => :things, :source => :wants
 end

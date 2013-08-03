@@ -1,0 +1,11 @@
+<div id="want-button">
+  <% if user_signed_in? %>
+      <% unless can? :manage, @thing %>
+          <% disabled =  @thing.wants.where(:user => current_user).any? %>
+
+          <h2><%= link_to 'WANT!', thing_want_path(@thing), :remote => true, :method => :post, :class => "btn btn-large btn-danger #{disabled ? 'disabled' : ''}" %></h2>
+      <% end %>
+  <% else %>
+      <%= link_to 'Увайдзіце', new_user_session_path %> каб узяць
+  <% end %>
+</div>

@@ -1,0 +1,11 @@
+<% wants = current_user.pending_wants %>
+<% if wants.any? %>
+<div class="dropdown" style="display: inline-block;">
+  <a class="dropdown-toggle" id="drop4" role="button" data-toggle="dropdown" href="#">Notifications<b class="caret"></b></a>
+  <ul id="menu1" class="dropdown-menu" style=" font-size: small;">
+    <%= render :partial => 'wants/notifications/want', :collection => wants %>
+  </ul>
+</div>
+<% else %>
+    No wants
+<% end %>

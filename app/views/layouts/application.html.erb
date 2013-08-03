@@ -7,23 +7,29 @@
   <%= csrf_meta_tags %>
 </head>
 <body style="width: 800px; margin: 20px auto;">
-<% if notice %>
-    <div class="alert alert-info"><%= notice %></div>
-<% end %>
-<% if alert %>
-    <div class="alert alert-error"><%= alert %></div>
-<% end %>
 <%= link_to 'Home', root_path %>
 <%= link_to 'Users', users_path %>
 <%= link_to 'Things', things_path %>
+
 <div style="float: right;">
-  <%= current_user.username if user_signed_in?%>
-  <%= link_to 'Profile', edit_user_path(current_user) if user_signed_in?%>
-  <%= link_to 'Sign In', new_user_session_path if !user_signed_in?%>
-  <%= link_to 'Sign Out', destroy_user_session_path, :method => :delete if user_signed_in?%>
+  <% if user_signed_in? %>
+      <%= current_user.username%>
+      <%= render :partial => 'wants/notifications/wants' %>
+      <%= link_to 'Profile', edit_user_registration_path(current_user) %>
+      <%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %>
+  <% else %>
+      <%= link_to 'Sign In', new_user_session_path %>
+  <% end %>
 </div>
+
 <div style="padding-top: 60px;">
-<%= yield %>
+  <% if notice %>
+      <div class="alert alert-info"><%= notice %></div>
+  <% end %>
+  <% if alert %>
+      <div class="alert alert-error"><%= alert %></div>
+  <% end %>
+  <%= yield %>
 </div>
 </body>
 </html>
