@@ -1,6 +1,6 @@
 class ThingsController < ApplicationController
   before_action :set_thing, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, only: [:new, :create, :update]
+  before_action :authenticate_user!, only: [:new, :create, :update, :want]
 
   # GET /things
   # GET /things.json
@@ -61,6 +61,11 @@ class ThingsController < ApplicationController
       format.html { redirect_to things_url }
       format.json { head :no_content }
     end
+  end
+
+  def want
+    @thing = Thing.find(params[:thing_id])
+    @thing.wants.create(:user => current_user)
   end
 
   private

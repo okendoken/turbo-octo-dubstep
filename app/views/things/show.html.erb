@@ -20,5 +20,7 @@
   <%= link_to @thing.user.username, @thing.user %>
 </p>
 
+<h2><%= link_to 'WANT!', thing_want_path(@thing), :remote => true, :method => :post if can? :want, @thing %> |</h2>
+
 <%= link_to 'Edit', edit_thing_path(@thing) if can? :manage, @thing%> |
 <%= link_to 'Back', things_path if can? :manage, @thing %>

@@ -1,5 +1,7 @@
 Freemarket::Application.routes.draw do
-  resources :things
+  resources :things do
+    post 'want'
+  end
 
   get "home/index"
   devise_for :users, :controllers => {:registrations => "users/registrations", :passwords => "users/passwords"}
