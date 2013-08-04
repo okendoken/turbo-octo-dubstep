@@ -5,6 +5,7 @@ Freemarket::Application.routes.draw do
 
   resources :wants, :only => [:show] do
     resources :messages, :only => [:create]
+    post 'give'
   end
 
   get "home/index"

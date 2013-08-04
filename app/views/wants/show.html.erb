@@ -1,2 +1,7 @@
 <%= user_link @want.user %> хоча ўзяць <%= thing_link @want.thing %>
 <%= render :partial => 'messages/partials/messages', :locals => {want: @want}%>
+<% if can? :finish, @want %>
+    <%= render :partial => 'wants/partials/finish', :locals => {want: @want}%>
+<% else %>
+    <%= render :partial => 'wants/partials/state', :locals => {want: @want}%>
+<% end %>

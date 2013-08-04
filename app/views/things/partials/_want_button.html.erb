@@ -1,7 +1,8 @@
 <div id="want-button">
   <% if user_signed_in? %>
       <% unless can? :manage, @thing %>
-          <% if @thing.wants.where(:user => current_user).empty? %>
+          <% wants = @thing.wants.where(:user => current_user) %>
+          <% if wants.empty? %>
               <a href="#myModal" role="button" class="btn btn-large btn-danger" data-toggle="modal">Хачу!</a>
 
               <!-- Modal -->
@@ -24,7 +25,7 @@
                 </div>
               </div>
           <% else %>
-              <%= link_to 'Pending', 'javascript:;', :class => 'btn btn-large btn-danger disabled' %>
+              <%= link_to 'Трэкнуць прогрэс', wants[0], :class => 'btn btn-large btn-info' %>
           <% end %>
       <% end %>
   <% else %>

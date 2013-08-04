@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130803202741) do
+ActiveRecord::Schema.define(version: 20130804101852) do
 
   create_table "messages", force: true do |t|
     t.integer  "want_id"
@@ -61,6 +61,8 @@ ActiveRecord::Schema.define(version: 20130803202741) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "finished"
+    t.boolean  "accepted"
   end
 
   add_index "wants", ["thing_id"], name: "index_wants_on_thing_id"

@@ -1,0 +1,13 @@
+
+<% if want.finished? %>
+    <% if want.accepted? %>
+        <%= thing_link want.thing %> ужо ў Вас
+    <% else %>
+        Нажаль, пайшло не Вам
+    <% end %>
+<% else %>
+    чэл думае
+    <div class="progress active progress-striped">
+      <div class="bar" style="width: 50%"></div>
+    </div>
+<% end %>

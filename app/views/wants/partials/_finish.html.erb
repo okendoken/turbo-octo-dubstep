@@ -1,0 +1,11 @@
+<div id="give-thing" class="">
+  <% if want.finished? %>
+      <%= thing_link want.thing %> ужо ў <%= user_link want.user %>
+  <% else %>
+
+      <%= form_tag(want_give_path(want), :remote => true, :method => 'post') do %>
+          <%= submit_tag 'Рэч аддадзена', :class => 'btn btn-large btn-success btn-block' %>
+      <% end %>
+
+  <% end %>
+</div>

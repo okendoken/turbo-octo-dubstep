@@ -1,0 +1,2 @@
+$("#give-thing").replaceWith("<%= escape_javascript( render :partial => 'wants/partials/finish', :locals => {want: @want}) %>");
+$("#notifications").replaceWith("<%= escape_javascript( render :partial => 'wants/notifications/wants') %>");
