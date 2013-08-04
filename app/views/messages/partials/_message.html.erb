@@ -1,0 +1,9 @@
+<% from_me = message.from == current_user %>
+<div class="message<%= from_me ? ' from-me' : '' %>">
+  <div class="<%= from_me ? 'pull-right' : 'pull-left' %>" style="border-<%= from_me ? 'left' : 'right' %>: 1px solid gray">
+    <%= user_link message.from %>
+  </div>
+  <div style="text-align: <%= from_me ? 'right' : 'left' %>; margin-<%= from_me ? 'right' : 'left' %>: 60px;">
+    <%= simple_format message.text %>
+  </div>
+</div>

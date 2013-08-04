@@ -3,7 +3,9 @@ Freemarket::Application.routes.draw do
     post 'want'
   end
 
-  resources :wants, :only => [:show]
+  resources :wants, :only => [:show] do
+    resources :messages, :only => [:create]
+  end
 
   get "home/index"
   devise_for :users, :controllers => {:registrations => "users/registrations", :passwords => "users/passwords"}

@@ -1,0 +1,19 @@
+<section id="messages">
+  <h3>Паведамленьні</h3>
+  <div id="messages-content" style="width: 600px; margin: 0 auto;">
+    <%= render :partial => 'messages/partials/message', :collection => want.messages %>
+  </div>
+</section>
+<%= form_for [want, Message.new], remote: true, :html => {:style => 'width: 600px; margin: 0 auto;'} do |f| %>
+    <legend>Новае паведамленьне</legend>
+    <div class="field">
+      <%= f.text_area :text, :class => 'input-block-level', :rows => 4 %>
+    </div>
+    <%= f.submit 'Даслаць', :class => 'btn btn-primary pull-right' %>
+<% end %>
+<div style="clear: both; margin-bottom: 30px"></div>
+<div class="">
+  <button class="btn btn-success btn-large pull-right">
+    Рэч аддадзена
+  </button>
+</div>

@@ -42,6 +42,7 @@ class ThingsController < ApplicationController
   # PATCH/PUT /things/1
   # PATCH/PUT /things/1.json
   def update
+    return unless can? :manage, @thing
     respond_to do |format|
       if @thing.update(thing_params)
         format.html { redirect_to @thing, notice: 'Thing was successfully updated.' }
@@ -65,7 +66,8 @@ class ThingsController < ApplicationController
 
   def want
     @thing = Thing.find(params[:thing_id])
-    @thing.wants.create(:user => current_user)
+    want = @thing.wants.create(:user => current_user)
+    Message.create(:text => message_params[:text], :from => current_user, :to => @thing.user, :want => want)
   end
 
   private
@@ -77,5 +79,9 @@ class ThingsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def thing_params
       params.require(:thing).permit(:name, :description)
+    end
+
+    def message_params
+      params.require(:message).permit(:text)
     end
 end

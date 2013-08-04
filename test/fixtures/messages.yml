@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  want_id: 
+  from_id: 
+  to_id: 
+  text: MyText
+
+two:
+  want_id: 
+  from_id: 
+  to_id: 
+  text: MyText
