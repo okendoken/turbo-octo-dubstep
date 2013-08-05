@@ -1,11 +1,13 @@
 <div id="notifications" style="display: inline-block;">
-  <% events = current_user.related_events %>
+  <% events = current_user.related_events.where(:read => false) %>
   <% if events.any? %>
       <div class="dropdown">
         <a class="dropdown-toggle" id="drop4" role="button" data-toggle="dropdown" href="#">Notifications<b class="caret"></b></a>
         <ul id="menu1" class="dropdown-menu" style=" font-size: small;">
           <% events.each do |event| %>
-              <%= render :partial => event.notification_template, :locals => {:event => event} %>
+              <li data-notification-id='<%= event.id %>'>
+                <%= render :partial => event.notification_template, :locals => {:event => event} %>
+              </li>
           <% end %>
         </ul>
       </div>

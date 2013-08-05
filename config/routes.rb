@@ -13,4 +13,5 @@ Freemarket::Application.routes.draw do
   root 'home#index'
   resources :users, :only => [:show, :index]
 
+  post 'notifications/update'
 end
