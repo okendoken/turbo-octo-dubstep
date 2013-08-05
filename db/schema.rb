@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130804101852) do
+ActiveRecord::Schema.define(version: 20130805021802) do
+
+  create_table "events", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "e_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "events", ["user_id"], name: "index_events_on_user_id"
 
   create_table "messages", force: true do |t|
     t.integer  "want_id"
@@ -25,6 +34,26 @@ ActiveRecord::Schema.define(version: 20130804101852) do
   add_index "messages", ["from_id"], name: "index_messages_on_from_id"
   add_index "messages", ["to_id"], name: "index_messages_on_to_id"
   add_index "messages", ["want_id"], name: "index_messages_on_want_id"
+
+  create_table "related_events", force: true do |t|
+    t.integer  "e_type"
+    t.boolean  "read"
+    t.integer  "readable_id"
+    t.string   "readable_type"
+    t.integer  "reader_id"
+    t.string   "reader_type"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "event_id"
+  end
+
+  add_index "related_events", ["event_id"], name: "index_related_events_on_event_id"
+  add_index "related_events", ["readable_id"], name: "index_related_events_on_readable_id"
+  add_index "related_events", ["readable_type"], name: "index_related_events_on_readable_type"
+  add_index "related_events", ["reader_id"], name: "index_related_events_on_reader_id"
+  add_index "related_events", ["reader_type"], name: "index_related_events_on_reader_type"
+  add_index "related_events", ["user_id"], name: "index_related_events_on_user_id"
 
   create_table "things", force: true do |t|
     t.string   "name"

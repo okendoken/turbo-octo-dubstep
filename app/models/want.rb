@@ -5,6 +5,13 @@ class Want < ActiveRecord::Base
 
   before_create :init
 
+
+  def self.create_want(thing, user, text)
+    want = thing.wants.create(:user => user)
+    Message.create(:text => text, :from => user, :to => thing.user, :want => want)
+    RelatedEvent.notify_all want, :created, user
+  end
+
   def init
     self.accepted = false if self.accepted.nil?
     self.finished = false if self.finished.nil?

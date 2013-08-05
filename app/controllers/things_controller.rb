@@ -66,8 +66,7 @@ class ThingsController < ApplicationController
 
   def want
     @thing = Thing.find(params[:thing_id])
-    want = @thing.wants.create(:user => current_user)
-    Message.create(:text => message_params[:text], :from => current_user, :to => @thing.user, :want => want)
+    Want.create_want @thing, current_user, message_params[:text]
   end
 
   private
