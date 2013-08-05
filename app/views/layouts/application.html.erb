@@ -14,7 +14,7 @@
 <div style="float: right;">
   <% if user_signed_in? %>
       <%= current_user.username%>
-      <%= render :partial => 'wants/notifications/wants' %>
+      <%= render :partial => 'notifications/partials/notifications' %>
       <%= link_to 'Profile', edit_user_registration_path(current_user) %>
       <%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %>
   <% else %>

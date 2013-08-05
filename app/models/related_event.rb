@@ -20,8 +20,8 @@ class RelatedEvent < ActiveRecord::Base
     end
   end
 
-  def notifications_template
+  def notification_template
     clazz = self.readable.class.name.downcase.to_sym
-    NOTIFICATIONS_TEMPLATES[clazz][DB_EVENT_TYPES[clazz].index(self.e_type)]
+    NOTIFICATION_TEMPLATES[clazz][DB_EVENT_TYPES[clazz].key(self.e_type)]
   end
 end
