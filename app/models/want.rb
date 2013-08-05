@@ -19,16 +19,19 @@ class Want < ActiveRecord::Base
 
   def finish
     ActiveRecord::Base.transaction do
+      author = self.thing.user
       self.thing.wants.each do |want|
         unless want == self
           want.accepted = false
           want.finished = true
           want.save
+          RelatedEvent.notify_all want, :finished, author #same as current_user
         end
       end
       self.accepted = true
       self.finished = true
       self.save
+      RelatedEvent.notify_all self, :finished, author
       self.thing.given = true
       self.thing.save
     end

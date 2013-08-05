@@ -3,7 +3,7 @@ class MessagesController < ApplicationController
   before_action :set_want
 
   def create
-    @message = Message.create(:text => message_params[:text], :from => current_user, :to => @want.user, :want => @want)
+    @message = Message.create_message message_params[:text], current_user, @want
   end
 
   private

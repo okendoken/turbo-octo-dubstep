@@ -1,0 +1,8 @@
+<% want = event.readable %>
+<li>
+  <% if want.accepted? %>
+      <%= link_to "Вы атрымалі #{want.thing.name}!", want.thing %>
+  <% else %>
+      <%= link_to "Нажаль, #{want.thing.name} была аддадзена ня Вам", want.thing %>
+  <% end %>
+</li>

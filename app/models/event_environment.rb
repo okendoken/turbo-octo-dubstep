@@ -6,7 +6,7 @@ module EventEnvironment
           :finished => Proc.new{|want| [want.user]}
       },
       :message => {
-          :sent => Proc.new{|message| [message.to]}
+          :created => Proc.new{|message| [message.to]}
       }
   }
 
@@ -15,16 +15,17 @@ module EventEnvironment
           :created => 0, :finished => 1
       },
       :message => {
-          :sent => 10
+          :created => 10
       }
   }
 
   NOTIFICATION_TEMPLATES = {
       :want => {
-          :created => 'notifications/partials/want'
+          :created => 'notifications/partials/want',
+          :finished => 'notifications/partials/want_finished'
       },
       :message => {
-          :sent => 10
+          :created => 'notifications/partials/message_sent'
       }
   }
 end
