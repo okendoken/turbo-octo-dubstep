@@ -1,0 +1,14 @@
+<h1>That's feed</h1>
+<% events = current_user.related_events %>
+<% if events.any? %>
+    <% events.each do |event| %>
+        <li data-notification-id='<%= event.id %>'>
+          <% unless event.read? %>
+          <span style="width: 15px; height: 15px; background: #099213; display: inline-block;"></span>
+          <% end %>
+          <%= render :partial => event.notification_template, :locals => {:event => event} %>
+        </li>
+    <% end %>
+<% else %>
+    No notifications
+<% end %>

@@ -9,6 +9,8 @@
                 <%= render :partial => event.notification_template, :locals => {:event => event} %>
               </li>
           <% end %>
+          <li class="divider"></li>
+          <li><%= link_to 'Праглядзець усё', root_path %></li>
         </ul>
       </div>
   <% else %>
