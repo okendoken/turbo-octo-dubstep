@@ -1,0 +1,129 @@
+body { visibility: visible; }
+
+h1 { font-size: 30px; }
+h2 { font-size: 24px; }
+h3 { font-size: 20px; }
+h4, .hentry h2 { font-size: 14px; }
+h5 { font-size: 12px; }
+.announce-after, .quotes article, .testimonial, body, html, textarea  {
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1, h2, h3, h4, h5, nav a, .icon-strip a h2, .slider h2, .portfolio-content h3, .blog h2, .comment-number h4, .comment h4, .pricing-table-price {
+    font-family: 'Open Sans', Arial, sans-serif; font-weight: 700; font-style: normal;
+}
+h1.product_title {
+    color: #fff;
+}
+.header-button, .single-page, .portfolio h3, .comments-number, .post-date-comments div .day-month, #comment-header, footer#site-footer h3.widget-title, .person h3, .statement-box button, .post-date-comments3 div .day-month, .tabs .tabs-menu li, .pricing-table-title, ul.products li.product .onsale {
+    font-family: 'Open Sans', Arial, sans-serif; font-weight: 600; font-style: normal;
+}
+nav ul li ul li a, .slider p, .breadcrumbs, .selected-filter, .blog footer, .comments-text, .tags-author, .comment-number h3, .comment-meta, .comment-reply-link, input[type="button"], .progress, .post-date-comments2, .quotes article span, .testimonial span, aside .tab.popular .post, .latest-post .subheading, div.product span.price, div.product p.price, #content div.product span.price, #content div.product p.pricediv.product span.price, div.product p.price, #content div.product span.price, #content div.product p.price   {
+    font-family: 'Open Sans', Arial, sans-serif; font-weight: 400; font-style: normal;
+}
+.slider h3 {
+    font-family: 'Open Sans', Arial, sans-serif; font-weight: 300; font-style: normal;
+}
+body, textarea, #s, a.icon p, .blog, .cat-item a, .sidebar-menu ul li a, aside .tweet_text, .comment p, .statement-box p,
+.quotes article, .testimonial, aside .tab.popular .post, aside .tab.recent .post, aside .tab.comments-widget .post, .accordion-h3  {
+    color: #727272;
+}
+h1, h2, h3, h4, h5, a.icon h3, .portfolio h3, .accordion-h3-selected, .blog h2, .breadcrumbs,
+#filters a.selected-filter, .portfolio-pagination a.selected-link, ul.page-numbers li .current,  #filters a.selected-filter:hover, ul.products li.product .price, div.product span.price, div.product p.price, #content div.product span.price, #content div.product p.price   {
+    color: #719400 ;
+}
+a, .header-button, .portfolio-content h3, section .blog footer span a, .sidebar-menu ul li a.selected-link,
+.cat-item a:hover, .sidebar-menu ul li a:hover, aside .tweet_text a, aside .tweet a, .shop_table th, .amount, .total strong,
+.featured-slider-outer.box a,
+.featured-slider-outer.box .amount {
+    color: #719400;
+}
+.megamenu .price ins, .megamenu .price ins span {
+    color: #719400 !important;
+}
+.megamenu .no-link > a {
+    color: #719400 !important;
+}
+.slider, .post-date-comments a, .post-date-comments3 a, .progress, .upper-menu, .upper-menu .social-icons a img, .upper-menu2, .post-date-comments a:before, .post-date-comments3 a:before, .comment-meta, .comment-meta:before, .pricing-table-price, footer#site-footer, span.onsale, ul.products li.product .onsale:before, .cart-wrapper .cart-contents, .product-image-holder-after, h1.product_title {
+    background: #719400 !important;
+    margin-bottom: 40px;
+}
+.slider {
+    background-color: #719400;
+}
+.upper-menu:after, .upper-menu2:after {
+    border-top: 6px solid #719400;
+}
+.social, .social-icons a img {
+    background:  #628000;
+}
+.upper-menu2 .social, .upper-menu2 .social-icons a img {
+    background: #719400;
+}
+.social {
+    color: #accf3a;
+}
+.footer p, footer a, #site-footer .tweet_text, .upper-menu, .upper-menu2, #site-footer a, #site-footer .tweet a, #site-footer .tweet_text a {
+    color: #dee8bc;
+}
+footer#site-footer h3.widget-title, footer#site-footer a:hover, footer#site-footer .flickr-image, #site-footer .tweet_text, .announce-after, #site-footer .product_list_widget .amount, #site-footer .product_list_widget del .amount  {
+    color: #ffffff !important;
+}
+nav li a {
+    color: #292929;
+}
+nav li a:hover, nav ul ul li a:hover {
+    color: #89b300 !important;
+}
+nav li.current_page_item a {
+    color: #719400;
+}
+nav ul ul li.has-sub-menu:after {
+    background: #719400;
+}
+a:hover, a.icon:hover h3 {
+    color: #92bf00;
+}
+.portfolio .portfolio-hover:after {
+    border-color: #5a7500 #fff #fff #5a7500;
+}
+.post-date-comments a:after, .post-date-comments3 a:after, .comment-meta:after {
+    border-color: #5a7500 transparent transparent #5a7500;
+}
+.cart-wrapper .cart-contents:after {
+    border-top: 8px solid #5a7500; border-bottom: 8px solid #fff; border-left: 8px solid #5a7500; border-right: 8px solid #fff;
+}
+ul.products li.product .onsale:after {
+    border-top: 9px solid #5a7500; border-bottom: 9px solid transparent; border-left: 9px solid #5a7500; border-right: 9px solid transparent;
+}
+.portfolio .portfolio-hover .enlarge, .portfolio .portfolio-hover .open, .post-date-comments div, .post-date-comments3 div, .cart-wrapper .cart-contents:before, .product-image-holder .enlarge, .product-image-holder .open {
+    background: #5a7500;
+}
+.portfolio .portfolio-hover {
+    background: #719400;
+}
+/* Button styles */
+.button-style1, .statement-box button, .pricing-table-footer a, .buttons a, .add_to_cart_button, .product .button, table.cart td.actions .button.alt, #content table.cart td.actions .button.alt, #submit, .shipping_calculator .button, a.button.alt, button.button.alt, input.button.alt, #respond input#submit.alt, #content input.button.alt, .woocommerce-message .button, .widget_login input[type="submit"], #wpmem_login input[type="submit"], #wpmem_login input[type="submit"]:hover, #wpmem_reg input[type="submit"], #wpmem_reg input[type="submit"]:hover {
+    color: #ffffff !important; background: #719400; background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#719400), to(#89b300)) !important; background: -webkit-linear-gradient(top, #89b300, #719400) !important; background: -moz-linear-gradient(top, #89b300, #719400) !important; background: -ms-linear-gradient(top, #89b300, #719400) !important; background: -o-linear-gradient(top, #89b300, #719400) !important; -ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#89b300, endColorstr=#719400)" !important;
+}
+
+form.login .button input, form.register .button input {
+    color: #ffffff !important;
+}
+
+.statement-box button, .pricing-table-footer a {
+    border-color: #89b300 #89b300 #719400 #89b300;
+}
+
+.button-style2 {
+    color: #ffffff !important; background: #252525; background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#252525), to(#454545)) !important;; background: -webkit-linear-gradient(top, #454545, #252525) !important; background: -moz-linear-gradient(top, #454545, #252525) !important; background: -ms-linear-gradient(top, #454545, #252525) !important; background: -o-linear-gradient(top, #454545, #252525) !important;; -ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#454545, endColorstr=#252525)" !important;;
+}
+
+.button-style3, .coupon input[type="button"], .shop_table input[type="submit"] {
+    color: #696969 !important; background: #d4d4d4; background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#d4d4d4), to(#f0f0f0)) !important; background: -webkit-linear-gradient(top, #f0f0f0, #d4d4d4) !important; background: -moz-linear-gradient(top, #f0f0f0, #d4d4d4) !important; background: -ms-linear-gradient(top, #f0f0f0, #d4d4d4) !important; background: -o-linear-gradient(top, #f0f0f0, #d4d4d4) !important;; -ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#f0f0f0, endColorstr=#d4d4d4)" !important;;
+}
+a.icon .wrapper.default, a.icon .wrapper.circle, a.icon .wrapper.square, a.icon .wrapper.diamond{
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#668500), to(#719400)); background-image: -webkit-linear-gradient(top, #719400, #668500); background-image: -moz-linear-gradient(top, #719400, #668500); background-image: -ms-linear-gradient(top, #a0d100, #83ab00); -ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#719400, endColorstr=#668500)";
+}
+.icon-hover {
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#83ab00), to(#a0d100)); background-image: -webkit-linear-gradient(top, #a0d100, #83ab00); background-image: -moz-linear-gradient(top, #a0d100, #83ab00); background-image: -ms-linear-gradient(top, #a0d100, #83ab00); -ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#a0d100, endColorstr=#83ab00)"; background-image: -ms-linear-gradient(top, #719400, #668500);
+}
