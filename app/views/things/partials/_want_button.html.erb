@@ -1,34 +1,38 @@
 <div id="want-button">
-  <% if user_signed_in? %>
-      <% unless can? :manage, @thing %>
-          <% wants = @thing.wants.where(:user => current_user) %>
-          <% if wants.empty? %>
-              <a href="#myModal" role="button" class="btn btn-large btn-danger" data-toggle="modal">Хачу!</a>
-
-              <!-- Modal -->
-              <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                  <h3 id="myModalLabel">Паведамленьне напішыце</h3>
-                </div>
-                <div class="modal-body">
-                  <%= form_for(Message.new, remote: true, url: thing_want_path(@thing), method: :post) do |f| %>
-                      <div class="field">
-                        <label>
-                          <%= f.text_area :text, class: 'input-block-level', rows: 4, placeholder: 'Тутака' %>
-                        </label>
-                      </div>
-                      <div class="field">
-                        <%= f.submit 'Даслаць', :class => 'btn btn-success btn-large pull-right' %>
-                      </div>
-                  <% end %>
-                </div>
-              </div>
-          <% else %>
-              <%= link_to 'Трэкнуць прогрэс', wants[0], :class => 'btn btn-large btn-info' %>
-          <% end %>
-      <% end %>
+  <% if @thing.given? %>
+  Ужо аададзена
   <% else %>
-      <%= link_to 'Увайдзіце', new_user_session_path %> каб узяць
+      <% if user_signed_in? %>
+          <% unless can? :manage, @thing %>
+              <% wants = @thing.wants.where(:user => current_user) %>
+              <% if wants.empty? %>
+                  <a href="#myModal" role="button" class="btn btn-large btn-danger" data-toggle="modal">Хачу!</a>
+
+                  <!-- Modal -->
+                  <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                      <h3 id="myModalLabel">Паведамленьне напішыце</h3>
+                    </div>
+                    <div class="modal-body">
+                      <%= form_for(Message.new, remote: true, url: thing_want_path(@thing), method: :post) do |f| %>
+                          <div class="field">
+                            <label>
+                              <%= f.text_area :text, class: 'input-block-level', rows: 4, placeholder: 'Тутака' %>
+                            </label>
+                          </div>
+                          <div class="field">
+                            <%= f.submit 'Даслаць', :class => 'btn btn-success btn-large pull-right' %>
+                          </div>
+                      <% end %>
+                    </div>
+                  </div>
+              <% else %>
+                  <%= link_to 'Трэкнуць прогрэс', wants[0], :class => 'btn btn-large btn-info' %>
+              <% end %>
+          <% end %>
+      <% else %>
+          <%= link_to 'Увайдзіце', new_user_session_path %> каб узяць
+      <% end %>
   <% end %>
 </div>
