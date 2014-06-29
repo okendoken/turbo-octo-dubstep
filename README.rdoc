@@ -1,28 +1,20 @@
-== README
+TO DO:
+=========
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+HTML-pages:
+- HOME (main pic, project-discription, algoritm, some things) 
+- THINGS list 
+    - sort: datenumber of "wanters"
+    - categories: art, city
+- THING description (picture, discription-text, author, date, city, status,category)
+   - button: want --> message
+   - comments
+- USER profile (foto, namen, list of thing, rating: given, taken)
+- USER account - DASCHBOARD - (messages, processing with thing)
+- THING track + conversation 
+- SIGN IN, LOG IN
+- CONTACTS
+ 
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+I LOVE YOU, Filip!!!
